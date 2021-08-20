@@ -3,11 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { ThemeProvider } from '@design-system-rt/rtk-ui-kit';
 
 ReactDOM.render(
-  <React.StrictMode>
+  <ThemeProvider themeName="light">
     <App />
-  </React.StrictMode>,
+  </ThemeProvider>,
   document.getElementById('root')
 );
 
