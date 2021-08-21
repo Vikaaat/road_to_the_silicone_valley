@@ -31,10 +31,17 @@ main{
   box-shadow: black 0px 0px 15px;
   border-radius: 21px;
 }
+.title{
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  margin-right: 70px;
+}
 .instrument{
-  min-height: 20px;
-  margin-left: 100px;
-  margin-right: 100px;
+  justify-content: center;
+  min-height: 50px;
+  margin-left: 260px;
+  margin-right: 180px;
   max-width: 100%;
   cursor: pointer;
   display: flex;
@@ -46,7 +53,7 @@ main{
   border-radius: 15px;
 }
 .element{
-  margin-left: 15%;
+  margin-left: 0;
 }
 h1{
   font-size: y;

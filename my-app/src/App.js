@@ -67,7 +67,8 @@ class App extends React.Component {
     return (
       <div className="App">
         <Header></Header>
-        <div class="instrument"><Link className="element"></Link><Download className="element"></Download><Comments className="element"></Comments><ZoomIn className="element"></ZoomIn><ZoomOut className="element"></ZoomOut></div>
+        <div class="instrument">
+          <div className="title"><Link className="element"></Link>Поделиться</div><div className="title"><Download className="element"></Download>Скачать</div><div className="title"><Comments className="element"></Comments>Заметка</div><div className="title"><ZoomIn className="element"></ZoomIn>Приблизить</div><div className="title"><ZoomOut className="element"></ZoomOut>Отдалить</div></div>
 
         <main>
           <div class="list-object">
