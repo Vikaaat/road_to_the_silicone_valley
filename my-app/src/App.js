@@ -1,11 +1,13 @@
 import './App.css';
-import { Header, Footer, Button, InputNumberStepper} from '@design-system-rt/rtk-ui-kit';
+import { Header, Footer, Button, Box, Chip} from '@design-system-rt/rtk-ui-kit';
 import React from 'react';
 const h=<Header/>
 class App extends React.Component {
   state = {
     countHeader: 0,
     countButton: 0,
+    countBox: 0,
+    countFooter: 0,
     startX: 0,
     startY: 0,
     color: "primary1",
@@ -21,6 +23,18 @@ class App extends React.Component {
     document.querySelector('.inspector').style.opacity=1
     this.setState(({ countButton }) => ({
       countButton: countButton + 1,
+    }));
+  }
+  onClickBox = () => {
+    document.querySelector('.inspector').style.opacity=0
+    this.setState(({ countBox }) => ({
+      countBox: countBox + 1,
+    }));
+  }
+  onClickFooter = () => {
+    document.querySelector('.inspector').style.opacity=0
+    this.setState(({ countFooter }) => ({
+      countFooter: countFooter + 1,
     }));
   }
   onDraggble = (e) => {
@@ -77,11 +91,20 @@ class App extends React.Component {
             <div class="object-item" onClick={this.onClickButton}>
               <Button color={currentColor}>{this.state.children}</Button>
             </div>
+            <div class="object-item" onClick={this.onClickBox}>
+              <Box style={{background: '#7700FF'}} cornersRounding="m" shadow="bottomM" spacing="m" spacingBottom="xxl">teetst</Box>
+            </div>
+            <div class="object-item" onClick={this.onClickFooter}>
+              <Footer children="Продолжая пользование сайтом, вы соглашаетесь на обработку файлов Cookies и других пользовательских данных, в соответствии с политикой конфиденциальности"></Footer>
+            </div>
+            
            
           </div>
           <div id="main-root">
           {[...Array(this.state.countHeader)].map(() => <Header draggable onDragStart={this.onDraggble} onDrag={this.moveDraggble} onDragEnd={this.EndDraggble}/>)}
           {[...Array(this.state.countButton)].map(() => <Button color={currentColor} draggable onDragStart={this.onDraggble} onDrag={this.moveDraggble} onDragEnd={this.EndDraggble}>{this.state.children}</Button>)}
+          {[...Array(this.state.countBox)].map(() => <Box style={{background: '#7700FF'}} cornersRounding="m" shadow="bottomM" spacing="m" spacingBottom="xxl" draggable onDragStart={this.onDraggble} onDrag={this.moveDraggble} onDragEnd={this.EndDraggble}>sagasg</Box>)}
+          {[...Array(this.state.countChip)].map(() => <Footer children="Продолжая пользование сайтом, вы соглашаетесь на обработку файлов Cookies и других пользовательских данных, в соответствии с политикой конфиденциальности" draggable onDragStart={this.onDraggble} onDrag={this.moveDraggble} onDragEnd={this.EndDraggble}></Footer>)}
           </div>
           <div class="inspector">
             <h1 class="title">Стили</h1>
