@@ -1,5 +1,5 @@
 import './App.css';
-import { Header, Footer, Button, Box, Chip} from '@design-system-rt/rtk-ui-kit';
+import { Header, Footer, Button, Box, InputNumberStepper, Link, Download, Comments, ZoomIn, ZoomOut} from '@design-system-rt/rtk-ui-kit';
 import React from 'react';
 const h=<Header/>
 class App extends React.Component {
@@ -81,6 +81,9 @@ class App extends React.Component {
     return (
       <div className="App">
         <Header></Header>
+        <div class="instrument">
+          <div className="title"><Link className="element"></Link>Поделиться</div><div className="title"><Download className="element"></Download>Скачать</div><div className="title"><Comments className="element"></Comments>Заметка</div><div className="title"><ZoomIn className="element"></ZoomIn>Приблизить</div><div className="title"><ZoomOut className="element"></ZoomOut>Отдалить</div></div>
+
         <main>
           <div class="list-object">
             <h1 class="title">Компоненты</h1>

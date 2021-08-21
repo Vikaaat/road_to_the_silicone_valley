@@ -31,6 +31,30 @@ main{
   box-shadow: black 0px 0px 15px;
   border-radius: 21px;
 }
+.title{
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  margin-right: 70px;
+}
+.instrument{
+  justify-content: center;
+  min-height: 50px;
+  margin-left: 260px;
+  margin-right: 180px;
+  max-width: 100%;
+  cursor: pointer;
+  display: flex;
+  position: sticky;
+  flex-direction: row;
+  align-items: normal;
+  background-color: rgba(237, 209, 253, 0.2);
+  box-shadow: black 0px 0px 15px;
+  border-radius: 15px;
+}
+.element{
+  margin-left: 0;
+}
 h1{
   font-size: y;
 }
