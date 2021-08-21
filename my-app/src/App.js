@@ -1,11 +1,10 @@
 import './App.css';
 import React from 'react';
+import render from 'react-dom'
 import Head from './components/Head.js';
 import Nav from './components/Nav.js';
-import Tools from './components/Tools.js';
 import Foot from './components/Foot.js';
-import Main from './components/Main.js';
-import Inspector from './components/Inspector.js';
+import Control from './components/Control.js';
 class App extends React.Component {
   render() {
     return (
@@ -13,9 +12,7 @@ class App extends React.Component {
         <Head />
         <Nav />
         <main>
-          <Tools />
-          <Main />
-          <Inspector />
+          <Control />
         </main>
         <Foot />
       </div>

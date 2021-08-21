@@ -6,10 +6,10 @@ class Tools extends React.Component{
         return(
             <div className="list-object">
                 <h1 className="title">Компоненты</h1>
-                <div className="object-item">
+                <div className="object-item" onClick = {() => {this.props.updateData("Header")}}>
                     <Header></Header>
                 </div>
-                <div className="object-item">
+                <div className="object-item" onClick = {() => {this.props.updateData("Button")}}>
                     <Button></Button>
                 </div>
             </div>
