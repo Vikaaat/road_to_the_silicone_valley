@@ -1,5 +1,6 @@
 import './App.css';
 import React from 'react';
+import ReactDOM from 'react-dom';
 import render from 'react-dom'
 import Head from './components/Head.js';
 import Nav from './components/Nav.js';

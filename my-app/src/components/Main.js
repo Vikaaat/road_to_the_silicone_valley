@@ -21,14 +21,15 @@ class Main extends React.Component{
     }
     render(){
         var prop = this.props.draw_elements;
+        var id = 0;
         if (prop.length > 0)
         {
             var head = prop.filter(item => item === "Header");
             var but = prop.filter(item => item === "Button");
             return(
                 <div id="main-root">
-                    {head.map(head => <Header draggable onDragEnd = {this.onDragEnd}/>)}
-                    {but.map(but => <Button draggable onDragEnd = {this.onDragEnd}/>)}
+                    {head.map(head => <Header className={++id} draggable onDragEnd = {this.onDragEnd} onClick = {() => {this.props.updateData(++id + " Header")}}/>)}
+                    {but.map(but => <Button id={++id} draggable onDragEnd = {this.onDragEnd} onClick = {() => {this.props.updateData(++id + " Button")}}/>)}
                 </div>
             );
         }
