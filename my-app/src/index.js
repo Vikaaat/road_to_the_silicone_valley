@@ -1,3 +1,5 @@
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
@@ -6,9 +8,10 @@ import reportWebVitals from './reportWebVitals';
 import { ThemeProvider } from '@design-system-rt/rtk-ui-kit';
 
 ReactDOM.render(
-  <ThemeProvider themeName="light">
+  <ThemeProvider themeName="dark">
     <App />
   </ThemeProvider>,
+  
   document.getElementById('root')
 );
 
